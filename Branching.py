@@ -33,8 +33,9 @@ def guessing_game(low, high):
     while correct:
         guess = int(input("Guess a number between " + str(low) + " and " + str(high) + ":"))
         if guess == target:
+            count += 1
             print("Congratulations, you guessed my number in " + str(count) + " tries")
-            correct = 1;
+            correct = False;
         if guess < target:
             low = guess
             print("You were too low, try again")
