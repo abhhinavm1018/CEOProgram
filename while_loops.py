@@ -29,8 +29,8 @@ def pig_latin(pig):
         if pig[num] in vowels:
             first_vowel_index = int(num);
             break
-    return pig[0, first_vowel_index] + pig[first_vowel_index+1, len(pig)]
+    return pig[0: first_vowel_index] + pig[first_vowel_index+1: len(pig)]
 
 
 if __name__ == '__main__':
-    pig_latin("hllelujah")
+    print(pig_latin("hllelujah"))
